@@ -10,6 +10,9 @@ Etapas para configurações máquinas Windows para publicação de dados abertos
   - O padrão da variável a ser criada é `http://USER:PASSWORD@PROXYADDRESS:PORT`
   - Crie variável de nome http_proxy e valor http://m123456:123456@proxycamg.prodemge.gov.br:8080 (substitua m123456 por seu USER de rede e 123456 por sua PASSWORD)
   - Crie variável de nome https_proxy e valor http://m123456:123456@proxycamg.prodemge.gov.br:8080 (substitua m123456 por seu USER de rede e 123456 por sua PASSWORD). **CUIDADO**: O link da variável de ambiente "http**s**\_proxy" começa realmente com "**http**"
+
+**Atenção**: Se na senhar constarem caracteres especiais como @ e #, estes precisam ser substituídos por caracteres de escape em HTML. Veja os [valores de conversão](https://dan-scientia.blogspot.com/2010/05/codificacao-por-cento-para-caracteres.html).
+
 - [ ] Instalar editor de Texto de sua preferência.
   * Indicação: Sublime.
   * Pesquisar no google "sublime download for windows".
