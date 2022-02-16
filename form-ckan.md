@@ -1,6 +1,6 @@
 # Termo-modelo para adesão de custodiante de dado ao Portal de Dados Abertos do Poder Executivo do Estado de Minas Gerais
 
-Eu @nome_interessado@, de matrícula nº @matricula_interessado@ e e-mail @email_interessado@, solicito a criação de perfil de usuário para minha organização no [Portal de Dados Abertos do Poder Executivo do Estado de Minas Gerais](http://dados.mg.gov.br/), para efetuar atividades de:
+Eu @nome_interessado@, de matrícula nº @matricula_interessado@ e e-mail @email_interessado@, solicito a criação de perfil de usuário para minha organização @organização@ no [Portal de Dados Abertos do Poder Executivo do Estado de Minas Gerais](http://dados.mg.gov.br/), para efetuar atividades de:
 
 - adicionar/editar e excluir conjuntos de dados da minha organização;
 
