@@ -12,24 +12,24 @@ Estou ciente e manifesto a minha concordância, ao assinar este termo, que devo:
 
 1. Observar as disposições das normas vigentes sobre dados abertos, em particular a [Resolução CGE nº 020, de 06 de agosto de 2014](http://pesquisalegislativa.mg.gov.br/LegislacaoCompleta.aspx?cod=171158);
 
-2. Utilizar formatos abertos para dados e metadados, licenças abertas e especificações recomendadas pela Diretoria Central de Transparência Ativa (DCTA), para facilitar o acesso, a compreensão e o reúso dos dados da minha organização que eu vier a publicar com meu perfil;
+2. Utilizar formatos abertos para dados e metadados, licenças abertas e especificações recomendadas pela Subcontroladoria de Transparência e Integridade (SUTI/CGE), para facilitar o acesso, a compreensão e o reúso dos dados da minha organização que eu vier a publicar com meu perfil;
 
 3. Responsabilizar-se pela conformidade entre os dados publicados e os dados da base-fonte;
 
 4. Manter atualizados os dados do Órgão/Entidade das respectivas unidades administrativas responsáveis pelas bases de dados que eu vier a publicar no Portal, incluindo os campos dos metadados (fonte, autor, mantenedor, e-mails de contato);
 
-5. Participar de treinamentos e capacitações oferecidas pela DCTA, bem como me inteirar de tutoriais e materiais sobre a manutenção do Portal;
+5. Participar de treinamentos e capacitações oferecidas pela SUTI/CGE, bem como me inteirar de tutoriais e materiais sobre a manutenção do Portal;
 
 6. Comunicar à DCTA as ocorrências não-previstas durante o uso do Portal;
 
-7. Avisar imediatamente à DCTA no caso de mudar de setor ou organização;
+7. Avisar imediatamente à SUTI/CGE no caso de mudar de setor ou organização;
 
 Para efeito de manutenção e auditoria, o Portal mantém registro individualizado de atividades.
 
 Poderá ser necessária a re-criação do perfil de usuário e dos conjuntos de dados criados, no caso de atualização da versão da plataforma utilizada no Portal. 
 
 
-Do exposto, formalizo, por meio deste Termo de Adesão, o meu compromisso em seguir as diretrizes da DCTA a ele relacionado.
+Do exposto, formalizo, por meio deste Termo de Adesão, o meu compromisso em seguir as diretrizes da SUTI/CGE a ele relacionado.
 
 
 __________
