@@ -39,10 +39,10 @@ __________
 [Cargo do interessado]
 
 __________
-[Nome e MASP do dirigente superior responsável pela base de dados]
+[Nome e MASP da autoridade responsável pela base de dados]
 
 __________
-[Cargo do dirigente superior responsável pela base de dados]
+[Cargo da autoridade responsável pela base de dados (subsecretário, chefe de gabinete ou equivalente)]
 
  
 
