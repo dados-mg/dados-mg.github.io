@@ -15,10 +15,10 @@ Estou ciente e manifesto a minha concordância, ao assinar este termo, que os us
 
   - responsabilizar-se pela conformidade entre os dados publicados e os dados da base-fonte;
 
-  - manter atualizados os dados do Órgão/Entidade das respectivas unidades administrativas responsáveis pelas bases de dados que eu vier a publicar no Portal, incluindo os campos dos metadados (fonte, autor, mantenedor, e-mails de contato);
+  - manter atualizados os dados das respectivas unidades administrativas responsáveis pelas bases de dados que eu vierem a ser publicadas no Portal.
 
 
-Do exposto, formalizo, por meio deste Termo de Adesão, o meu compromisso em seguir as diretrizes da SUTI/CGE a ele relacionado.
+Do exposto, formalizo, por meio deste Termo de Adesão, o meu compromisso em seguir as diretrizes da SUTI/CGE a ele relacionado. 
 
 
 __________
