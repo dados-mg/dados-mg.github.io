@@ -188,7 +188,7 @@ row  field  code        message
 [Relatório online Frictionless via Github Actions](https://repository.frictionlessdata.io/report/?user=dados-mg&repo=doacoes-comodatos-amigo-estado-mg&flow=frictionless&run=1964338865)
 
   
-  b. constrint-error
+  b. constraint-error
 
 ````
 $ frictionless validate datapackage.json
