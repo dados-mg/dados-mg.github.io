@@ -234,9 +234,9 @@ a. encoding Western, Latin, Windows...
 
 b. encoding UTF-8 sem Byte Order Mask (BOM)
 
-![](static/bom)
+![](static/bom.png)
 
-![](static/bom-comparado)
+![](static/bom-comparado.png)
 
 - - - 
 
