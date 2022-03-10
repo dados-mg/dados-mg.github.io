@@ -4,8 +4,7 @@
 
 #### 1.1. Sintaxe do `datapackage.json`:
 
-
-i. faltou abrir ou fechar algum campo com aspas, "", colchetes '[ ]' ou chaves '{ }'
+**i. faltou abrir ou fechar algum campo com aspas, "", colchetes '[ ]' ou chaves '{ }'**
 
 ````$ frictionless validate datapackage.json
 # -------
@@ -18,12 +17,11 @@ package-error  The data package has an error: cannot extract metadata "datapacka
 =============  ===================================================================================================================================
 ````
 
-![](static/sintaxe2-datapackage.png)
-
 [Relatório online Frictionless via Github Actions](https://repository.frictionlessdata.io/report/?user=dados-mg&repo=doacoes-comodatos-amigo-estado-mg&flow=frictionless&run=1963653699)
 
+![](static/sintaxe2-datapackage.png)
 
-ii. faltou/sobrou alguma vírgula
+**ii. faltou/sobrou alguma vírgula**
 
 ````$ frictionless validate datapackage.json
 # -------
@@ -37,9 +35,9 @@ package-error  The data package has an error: cannot extract metadata "datapacka
 
 ````
 
-![](static/sintaxe-datapackage.png)
-
 [Relatório online Frictionless via Github Actions](https://repository.frictionlessdata.io/report/?user=dados-mg&repo=doacoes-comodatos-amigo-estado-mg&flow=frictionless&run=1963648000)
+
+![](static/sintaxe-datapackage.png)
 
 
 #### 1.2. Nome `name` do recurso contém caracteres fora da faixa permitida
@@ -60,7 +58,7 @@ package-error  The data package has an error: "'doa▒▒es-comodatos-amigo-esta
 
 #### 1.3. O caminho `path` incorreto
 
-i. onde se localizam os arquivos de dados:
+**i. onde se localizam os arquivos de dados:**
 
 ````$ frictionless validate datapackage.json
 # -------
@@ -74,11 +72,11 @@ row  field  code          message
 ===  =====  ============  ==============================================================================================================================
 ````
 
-![](static/path.png)
-
 [Relatório online Frictionless via Github Actions](https://repository.frictionlessdata.io/report/?user=dados-mg&repo=doacoes-comodatos-amigo-estado-mg&flow=frictionless&run=1963749335)
 
-ii. onde se localizam os arquivos de metadados `datapackage.json`, o `schema.json`, ou o `dialect.json`
+![](static/path.png)
+
+**ii. onde se localizam os arquivos de metadados `datapackage.json`, o `schema.json`, ou o `dialect.json`**
 
 ````$ frictionless validate datapackage.json
 # -------
@@ -91,10 +89,9 @@ schema-error  Schema is not valid: cannot extract metadata "schema.json" because
 ============  =======================================================================================================================
 ````
 
-![](static/path-schema.png)
-
 [Relatório online Frictionless via Github Actions](https://repository.frictionlessdata.io/report/?user=dados-mg&repo=doacoes-comodatos-amigo-estado-mg&flow=frictionless&run=1963769051)
 
+![](static/path-schema.png)
 
 #### 4. Datapackage sem a propriedade `owner_org` obrigatória ou grafada incorretamente ( hífen'-' em vez de underline "_")
 
@@ -102,11 +99,13 @@ schema-error  Schema is not valid: cannot extract metadata "schema.json" because
 
 ## 2. Sobre os arquivos de dados e seu conteúdo
 
-#### 1.1. Divergências de características dos dados no `datapackage.json`
+#### 2.1. Divergências de características dos dados no `datapackage.json`
 
-i. formatos de data
+**i. formatos de data**
 
-ii. dado obrigatório ausente
+
+
+**ii. dado obrigatório ausente**
 
 ````$ frictionless validate datapackage.json
 # -------
@@ -120,7 +119,7 @@ row  field  code        message
 ===  =====  ==========  =================================================================================================
 ````
 
-![](static/dado-ausente.png)
+[Relatório online Frictionless via Github Actions](https://repository.frictionlessdata.io/report/?user=dados-mg&repo=doacoes-comodatos-amigo-estado-mg&flow=frictionless&run=1719709178)
 
 
 ````          {
@@ -138,18 +137,36 @@ row  field  code        message
         ]
 ````
 
-[Relatório online Frictionless via Github Actions](https://repository.frictionlessdata.io/report/?user=dados-mg&repo=doacoes-comodatos-amigo-estado-mg&flow=frictionless&run=1719709178)
+![](static/dado-ausente.png)
 
 
-iii. valor numérico não inteiro ou sem a correta caracterização no datapackage.json
+**iii. valor numérico não inteiro**
+
+- faltou informar os separadores de milhar (groupChar) e decimais (decimalChar):            
+
+````$ frictionless validate datapackage.json
+# -------
+# invalid: data/doacoes-comodatos-amigo-estado-mg.csv
+# -------
+
+===  =====  ==========  =============================================================================================================
+row  field  code        message
+===  =====  ==========  =============================================================================================================
+  2      9  type-error  Type error in the cell "300.000,00" in row "2" and field "VALOR" at position "9": type is "number/default"
+  3      9  type-error  Type error in the cell "220.000,00" in row "3" and field "VALOR" at position "9": type is "number/default"
+  4      9  type-error  Type error in the cell "347.000,00" in row "4" and field "VALOR" at position "9": type is "number/default"
+````
+
+[Relatório online Frictionless via Github Actions](https://repository.frictionlessdata.io/report/?user=dados-mg&repo=doacoes-comodatos-amigo-estado-mg&flow=frictionless&run=1965166830)
+
+````"groupChar": ".",
+    "decimalChar": ","
+````
+
+![](static/number-default.png)
 
 
-
-iv. número decimal/porcentagem (string X number)
-
-
-
-v. valor fora das características informadas
+**iv. valor fora das características informadas**
 
   a. type-error
 
@@ -190,10 +207,35 @@ row  field  code              message
 [Relatório online Frictionless via Github Actions](https://repository.frictionlessdata.io/report/?user=dados-mg&repo=doacoes-comodatos-amigo-estado-mg&flow=frictionless&run=1964359181)
 
 
-#### 2.1. Arquivo de dados sem encoding `utf-8` 
+#### 2.2. valores fora dos campos delimitadores (, ou ;):
+
+````
+$ frictionless validate datapackage.json
+# -------
+# invalid: datapackage.json
+# -------
+==========  ======================================
+code        message
+==========  ======================================
+task-error  The task has an error: 'fieldPosition'
+==========  ======================================
+````
+
+[Relatório online Frictionless via Github Actions](https://repository.frictionlessdata.io/report/?user=dados-mg&repo=doacoes-comodatos-amigo-estado-mg&flow=frictionless&run=1965203974)
+
+[](static/escaping.png)
 
 
+#### 2.3. Arquivo de dados sem encoding `utf-8` 
 
+a. encoding Western, Latin, Windows...
+
+
+b. encoding UTF-8 sem Byte Order Mask (BOM)
+
+![](static/bom)
+
+![](static/bom-comparado)
 
 - - - 
 
