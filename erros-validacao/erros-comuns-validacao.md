@@ -2,10 +2,10 @@
 
 ## 1. Sobre os arquivos de metadados e seu conteúdo
 
-1. Sintaxe do `datapackage.json`:
+#### 1.1. Sintaxe do `datapackage.json`:
 
 
-- faltou abrir ou fechar algum campo com aspas, "", colchetes '[ ]' ou chaves '{ }'
+i. faltou abrir ou fechar algum campo com aspas, "", colchetes '[ ]' ou chaves '{ }'
 
 ````$ frictionless validate datapackage.json
 # -------
@@ -23,7 +23,7 @@ package-error  The data package has an error: cannot extract metadata "datapacka
 [Relatório online Frictionless via Github Actions](https://repository.frictionlessdata.io/report/?user=dados-mg&repo=doacoes-comodatos-amigo-estado-mg&flow=frictionless&run=1963653699)
 
 
-- faltou/sobrou alguma vírgula
+ii. faltou/sobrou alguma vírgula
 
 ````$ frictionless validate datapackage.json
 # -------
@@ -42,7 +42,7 @@ package-error  The data package has an error: cannot extract metadata "datapacka
 [Relatório online Frictionless via Github Actions](https://repository.frictionlessdata.io/report/?user=dados-mg&repo=doacoes-comodatos-amigo-estado-mg&flow=frictionless&run=1963648000)
 
 
-2. Nome `name` do recurso contém caracteres fora da faixa permitida
+#### 1.2. Nome `name` do recurso contém caracteres fora da faixa permitida
 
 ````$ frictionless validate datapackage.json
 # -------
@@ -58,10 +58,9 @@ package-error  The data package has an error: "'doa▒▒es-comodatos-amigo-esta
 ![](static/name.png)
 
 
-3. O caminho `path` incorreto
+#### 1.3. O caminho `path` incorreto
 
-
-- onde se localizam os arquivos de dados:
+i. onde se localizam os arquivos de dados:
 
 ````$ frictionless validate datapackage.json
 # -------
@@ -79,8 +78,7 @@ row  field  code          message
 
 [Relatório online Frictionless via Github Actions](https://repository.frictionlessdata.io/report/?user=dados-mg&repo=doacoes-comodatos-amigo-estado-mg&flow=frictionless&run=1963749335)
 
-
-- onde se localizam os arquivos de metadados `datapackage.json`, o `schema.json`, ou o `dialect.json`
+ii. onde se localizam os arquivos de metadados `datapackage.json`, o `schema.json`, ou o `dialect.json`
 
 ````$ frictionless validate datapackage.json
 # -------
@@ -98,17 +96,17 @@ schema-error  Schema is not valid: cannot extract metadata "schema.json" because
 [Relatório online Frictionless via Github Actions](https://repository.frictionlessdata.io/report/?user=dados-mg&repo=doacoes-comodatos-amigo-estado-mg&flow=frictionless&run=1963769051)
 
 
-4. Datapackage sem a propriedade `owner_org` obrigatória ou grafada incorretamente ( hífen'-' em vez de underline "_")
+#### 4. Datapackage sem a propriedade `owner_org` obrigatória ou grafada incorretamente ( hífen'-' em vez de underline "_")
 
 
 
 ## 2. Sobre os arquivos de dados e seu conteúdo
 
-1. Divergências de características dos dados no `datapackage.json`
+#### 1.1. Divergências de características dos dados no `datapackage.json`
 
-- formatos de data
+i. formatos de data
 
-- dado obrigatório ausente
+ii. dado obrigatório ausente
 
 ````$ frictionless validate datapackage.json
 # -------
@@ -133,21 +131,27 @@ row  field  code        message
             "description": "Valor estimado do bem ou serviço doado ou oferecido em comodato. Pode ser em moeda nacional ou estrangeira.",
             "groupChar": ".",
             "decimalChar": ","
-          },
+          }
+        ]
+        "missingValues": [
+          "NA"
+        ]
 ````
 
 [Relatório online Frictionless via Github Actions](https://repository.frictionlessdata.io/report/?user=dados-mg&repo=doacoes-comodatos-amigo-estado-mg&flow=frictionless&run=1719709178)
 
 
-- valor numérico não inteiro ou sem a correta caracterização no datapackage.json
+iii. valor numérico não inteiro ou sem a correta caracterização no datapackage.json
 
 
 
-- número decimal/porcentagem (string X number)
+iv. número decimal/porcentagem (string X number)
 
 
 
-- valor fora das características informadas
+v. valor fora das características informadas
+
+  a. type-error
 
 ````$ frictionless validate datapackage.json
 # -------
@@ -165,6 +169,8 @@ row  field  code        message
 
 [Relatório online Frictionless via Github Actions](https://repository.frictionlessdata.io/report/?user=dados-mg&repo=doacoes-comodatos-amigo-estado-mg&flow=frictionless&run=1964338865)
 
+  
+  b. constrint-error
 
 ````
 $ frictionless validate datapackage.json
@@ -184,7 +190,7 @@ row  field  code              message
 [Relatório online Frictionless via Github Actions](https://repository.frictionlessdata.io/report/?user=dados-mg&repo=doacoes-comodatos-amigo-estado-mg&flow=frictionless&run=1964359181)
 
 
-2. Arquivo de dados sem encoding `utf-8` 
+#### 2.1. Arquivo de dados sem encoding `utf-8` 
 
 
 
