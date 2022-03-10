@@ -159,7 +159,8 @@ row  field  code        message
 
 [Relatório online Frictionless via Github Actions](https://repository.frictionlessdata.io/report/?user=dados-mg&repo=doacoes-comodatos-amigo-estado-mg&flow=frictionless&run=1965166830)
 
-````"groupChar": ".",
+````
+"groupChar": ".",
     "decimalChar": ","
 ````
 
