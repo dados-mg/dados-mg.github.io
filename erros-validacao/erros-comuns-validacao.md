@@ -224,7 +224,7 @@ task-error  The task has an error: 'fieldPosition'
 
 [Relatório online Frictionless via Github Actions](https://repository.frictionlessdata.io/report/?user=dados-mg&repo=doacoes-comodatos-amigo-estado-mg&flow=frictionless&run=1965203974)
 
-[](static/escaping.png)
+![](static/escaping.png)
 
 
 #### 2.3. Arquivo de dados sem encoding `utf-8` 
