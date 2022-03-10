@@ -18,7 +18,7 @@ package-error  The data package has an error: cannot extract metadata "datapacka
 =============  ===================================================================================================================================
 ````
 
-![](static/sintaxe2-datapackage.json)
+![](static/sintaxe2-datapackage.png)
 
 [Relatório online Frictionless via Github Actions](https://repository.frictionlessdata.io/report/?user=dados-mg&repo=doacoes-comodatos-amigo-estado-mg&flow=frictionless&run=1963653699)
 
@@ -37,7 +37,7 @@ package-error  The data package has an error: cannot extract metadata "datapacka
 
 ````
 
-![](static/sintaxe-datapackage.json)
+![](static/sintaxe-datapackage.png)
 
 [Relatório online Frictionless via Github Actions](https://repository.frictionlessdata.io/report/?user=dados-mg&repo=doacoes-comodatos-amigo-estado-mg&flow=frictionless&run=1963648000)
 
@@ -55,9 +55,7 @@ package-error  The data package has an error: "'doa▒▒es-comodatos-amigo-esta
 =============  ================================================================================================================================================================================================================
 ````
 
-![](static/name)
-
-[Relatório online Frictionless via Github Actions]()
+![](static/name.png)
 
 
 3. O caminho `path` incorreto
@@ -77,7 +75,7 @@ row  field  code          message
 ===  =====  ============  ==============================================================================================================================
 ````
 
-![](static/path)
+![](static/path.png)
 
 [Relatório online Frictionless via Github Actions](https://repository.frictionlessdata.io/report/?user=dados-mg&repo=doacoes-comodatos-amigo-estado-mg&flow=frictionless&run=1963749335)
 
@@ -95,7 +93,7 @@ schema-error  Schema is not valid: cannot extract metadata "schema.json" because
 ============  =======================================================================================================================
 ````
 
-![](static/path-schema)
+![](static/path-schema.png)
 
 [Relatório online Frictionless via Github Actions](https://repository.frictionlessdata.io/report/?user=dados-mg&repo=doacoes-comodatos-amigo-estado-mg&flow=frictionless&run=1963769051)
 
@@ -124,7 +122,7 @@ row  field  code        message
 ===  =====  ==========  =================================================================================================
 ````
 
-![](static/dado-ausente)
+![](static/dado-ausente.png)
 
 
 ````          {
@@ -136,7 +134,7 @@ row  field  code        message
             "groupChar": ".",
             "decimalChar": ","
           },
-          ````
+````
 
 [Relatório online Frictionless via Github Actions](https://repository.frictionlessdata.io/report/?user=dados-mg&repo=doacoes-comodatos-amigo-estado-mg&flow=frictionless&run=1719709178)
 
@@ -163,7 +161,7 @@ row  field  code        message
 ===  =====  ==========  =======================================================================================================
 ````
 
-![](static/valor-fora)
+![](static/valor-fora.png)
 
 [Relatório online Frictionless via Github Actions](https://repository.frictionlessdata.io/report/?user=dados-mg&repo=doacoes-comodatos-amigo-estado-mg&flow=frictionless&run=1964338865)
 
@@ -181,7 +179,7 @@ row  field  code              message
 ===  =====  ================  ==============================================================================================================================================
 
 ````
-![](static/valor2-fora)
+![](static/valor2-fora.png)
 
 [Relatório online Frictionless via Github Actions](https://repository.frictionlessdata.io/report/?user=dados-mg&repo=doacoes-comodatos-amigo-estado-mg&flow=frictionless&run=1964359181)
 
