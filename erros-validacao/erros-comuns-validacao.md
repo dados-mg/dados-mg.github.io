@@ -4,7 +4,7 @@
 
 #### 1.1. Sintaxe do `datapackage.json`:
 
-**i. faltou abrir ou fechar algum campo com aspas, "", colchetes '[ ]' ou chaves '{ }'**
+**a. faltou abrir ou fechar algum campo com aspas, "", colchetes '[ ]' ou chaves '{ }'**
 
 ````$ frictionless validate datapackage.json
 # -------
@@ -21,9 +21,10 @@ package-error  The data package has an error: cannot extract metadata "datapacka
 
 ![](static/sintaxe2-datapackage.png)
 
+
 * Solução: corrigir a sintaxe do arquivo datapackage.json na linha indicada pela mensagem de erro, utilizando o editor de texto ou o editor de arquivos do github (que também podem fazer marcações visuais de erros de sintaxe)
 
-**ii. faltou/sobrou alguma vírgula**
+**b. faltou/sobrou alguma vírgula**
 
 ````$ frictionless validate datapackage.json
 # -------
@@ -41,7 +42,7 @@ package-error  The data package has an error: cannot extract metadata "datapacka
 
 ![](static/sintaxe-datapackage.png)
 
-* Solução: corrigir a sintaxe do arquivo datapackage.json na linha indicada pela mensagem de erro, utilizando o editor de texto ou o editor de arquivos do github (que também podem fazer marcações visuais de erros de sintaxe)
+* **Solução**: corrigir a sintaxe do arquivo datapackage.json na linha indicada pela mensagem de erro, utilizando o editor de texto ou o editor de arquivos do github (que também podem fazer marcações visuais de erros de sintaxe)
 
 #### 1.2. Nome `name` do recurso contém caracteres fora da faixa permitida
 
@@ -58,12 +59,12 @@ package-error  The data package has an error: "'doa▒▒es-comodatos-amigo-esta
 
 ![](static/name.png)
 
-* Solução: corrigir a propriedade `name` contendo [especificações legíveis por máquina](https://specs.frictionlessdata.io/data-resource/#metadata-properties) (i.e. letras minúsculas, sem espaços, sem caracteres especiais)
+* **Solução**: corrigir a propriedade `name` contendo [especificações legíveis por máquina](https://specs.frictionlessdata.io/data-resource/#metadata-properties) (i.e. letras minúsculas, sem espaços, sem caracteres especiais)
 
 
 #### 1.3. O caminho `path` incorreto
 
-**i. onde se localizam os arquivos de dados:**
+**a. onde se localizam os arquivos de dados:**
 
 ````$ frictionless validate datapackage.json
 # -------
@@ -81,9 +82,9 @@ row  field  code          message
 
 ![](static/path.png)
 
-* Solução: corrigir o valor da propriedade `path` incorporando o nome da pasta ou URL onde se localiza o recurso, ou corrigindo o nome do recurso, se for o caso
+* **Solução**: corrigir o valor da propriedade `path` incorporando o nome da pasta ou URL onde se localiza o recurso, ou corrigindo o nome do recurso, se for o caso
 
-**ii. onde se localizam os arquivos de metadados `datapackage.json`, o `schema.json`, ou o `dialect.json`**
+**b. onde se localizam os arquivos de metadados `datapackage.json`, o `schema.json`, ou o `dialect.json`**
 
 ````$ frictionless validate datapackage.json
 # -------
@@ -100,21 +101,18 @@ schema-error  Schema is not valid: cannot extract metadata "schema.json" because
 
 ![](static/path-schema.png)
 
-* Solução: corrigir o valor da propriedade `path` incorporando o nome da pasta ou URL onde se localiza o `schema` ou `dialect`, ou corrigindo seu nome, se for o caso
-
-#### 4. Datapackage sem a propriedade `owner_org` obrigatória ou grafada incorretamente ( hífen'-' em vez de underline "_")
-
+* **Solução**: corrigir o valor da propriedade `path` incorporando o nome da pasta ou URL onde se localiza o `schema` ou `dialect`, ou corrigindo seu nome, se for o caso
 
 
 ## 2. Sobre os arquivos de dados e seu conteúdo
 
 #### 2.1. Divergências de características dos dados no `datapackage.json`
 
-**i. formatos de data**
+**a. formatos de data**
 
 
 
-**ii. dado obrigatório ausente**
+**b. dado obrigatório ausente**
 
 ````$ frictionless validate datapackage.json
 # -------
@@ -148,10 +146,10 @@ row  field  code        message
 
 ![](static/dado-ausente.png)
 
-* Solução: completar o valor ausente indicado no arquivo do recurso. Se ele não for obrigatório, aplicar 'NA' na célula indicada no arquivo do recurso
+* **Solução**: completar o valor ausente indicado no arquivo do recurso. Se ele não for obrigatório, aplicar 'NA' na célula indicada no arquivo do recurso
 
 
-**iii. valor numérico não inteiro**
+**c. valor numérico não inteiro**
 
 - faltou informar os separadores de milhar (groupChar) e decimais (decimalChar):            
 
@@ -171,7 +169,7 @@ row  field  code        message
 
 ![](static/number-default.png)
 
-* Solução: aplicar as propriedades de separador de milhar `groupChar` e/ou separador de decimais `decimalChar`, sempre quando o valor numérico utilizar essa grafia. Alterar o valor da propriedade `type` de `integer` para `number`:
+* **Solução**: aplicar as propriedades de separador de milhar `groupChar` e/ou separador de decimais `decimalChar`, sempre quando o valor numérico utilizar essa grafia. Alterar o valor da propriedade `type` de `integer` para `number`:
 
 ````
 "type": "number",
@@ -181,9 +179,9 @@ row  field  code        message
 "decimalChar": ","
 ````
 
-**iv. valor fora das características informadas**
+**d. valor fora das características informadas**
 
-  a. type-error
+  i. type-error
 
 ````$ frictionless validate datapackage.json
 # -------
@@ -200,9 +198,9 @@ row  field  code        message
 
 ![](static/valor-fora.png)
 
-* Solução: alterar os valores no arquivo do recurso, observando as características das variáveis numéricas indicadas no `datapackage.json`. Caso o problema tenha sido na descrição do dado, alterar as propriedades necessárias no `datapackage.json`  
+* **Solução**: alterar os valores no arquivo do recurso, observando as características das variáveis numéricas indicadas no `datapackage.json`. Caso o problema tenha sido na descrição do dado, alterar as propriedades necessárias no `datapackage.json`  
   
-  b. constraint-error - pattern
+  ii. constraint-error - pattern
 
 ````
 $ frictionless validate datapackage.json
@@ -221,7 +219,8 @@ row  field  code              message
 
 ![](static/valor2-fora.png)
 
-* Solução: alterar os valores no arquivo do recurso, observando as características das variáveis indicadas no `datapackage.json`. Caso o problema tenha sido na descrição do dado, alterar as propriedades necessárias no `datapackage.json`
+* **Solução**: alterar os valores no arquivo do recurso, observando as características das variáveis indicadas no `datapackage.json`. Caso o problema tenha sido na descrição do dado, alterar as propriedades necessárias no `datapackage.json`
+
 
 #### 2.2. valores fora dos campos delimitadores (, ou ;):
 
@@ -255,7 +254,7 @@ b. encoding UTF-8 sem Byte Order Mask (BOM)
 
 ![](static/bom-comparado.png)
 
-* Solução: gerar o arquivo `csv` com o BOM. No editor de texto Sublime, 'Save with Encoding --> UTF-8 with BOM'
+* **Solução**: gerar o arquivo `csv` com o BOM. No editor de texto Sublime, 'Save with Encoding --> UTF-8 with BOM'
 
 - - - 
 
