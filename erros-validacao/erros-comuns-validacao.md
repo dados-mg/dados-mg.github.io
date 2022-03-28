@@ -1,6 +1,6 @@
 # Erros comuns de validação:
 
-* Índice:
+## Índice:
 
  1. [Sobre os arquivos de metadados e seu conteúdo](https://github.com/dados-mg/dados-mg.github.io/blob/erros-valiacao/erros-validacao/erros-comuns-validacao.md#1-sobre-os-arquivos-de-metadados-e-seu-conte%C3%BAdo)
 
@@ -31,7 +31,7 @@
 Este documento segue, tanto quanto possível, a estrutura:
 
 ---
-# Natureza/grupo do erro
+## Natureza/grupo do erro
 
 ## Título do erro
 
@@ -112,6 +112,7 @@ package-error  The data package has an error: cannot extract metadata "datapacka
 * **Solução**: corrigir a sintaxe do arquivo datapackage.json na linha indicada pela mensagem de erro, utilizando o editor de texto ou o editor de arquivos do github (que também podem fazer marcações visuais de erros de sintaxe)
 
 #### 1.2. Nome `name` do recurso contém caracteres fora da faixa permitida
+<a href="#top">(inicio)</a>
 
 A especificação `Frictionless` não aceita espaços, letras maiúsculas ou caracteres especiais no valor deste campo:
 
@@ -132,6 +133,7 @@ package-error  The data package has an error: "'doa▒▒es-comodatos-amigo-esta
 
 
 #### 1.3. O caminho `path` incorreto
+<a href="#top">(inicio)</a>
 
 **a. onde se localizam os arquivos de dados:**
 
@@ -191,6 +193,7 @@ Observar se a estrutura física do dado está coerente com sua representação l
 
 
 **b. dado obrigatório ausente**
+<a href="#top">(inicio)</a>
 
 ````$ frictionless validate datapackage.json
 # -------
@@ -228,6 +231,7 @@ row  field  code        message
 
 
 **c. valor numérico não inteiro**
+<a href="#top">(inicio)</a>
 
 - faltou informar os separadores de milhar (groupChar) e decimais (decimalChar):            
 
@@ -258,6 +262,7 @@ row  field  code        message
 ````
 
 **d. valor fora das características informadas**
+<a href="#top">(inicio)</a>
 
   i. type-error
 
@@ -301,6 +306,7 @@ row  field  code              message
 
 
 #### 2.2. valores fora dos campos delimitadores (, ou ;):
+<a href="#top">(inicio)</a>
 
 Na conversão de tipos de arquivo, texto ou valores de uma coluna podem 'vazar'. Observar se há sinais de pontuação (',', ';') que também funcionam como delimitadores, e podem redundar no erro:
 
@@ -324,6 +330,7 @@ task-error  The task has an error: 'fieldPosition'
 
 
 #### 2.3. Arquivo de dados sem encoding `utf-8` 
+<a href="#top">(inicio)</a>
 
 a. encoding Western, Latin, Windows...
 
@@ -341,6 +348,7 @@ A assinatura 'Byte Order Mask (BOM)' preserva a visualiação adequada dos carac
 - - - 
 
 ## Appendix - Lista de verificação Frictionless - 'Validation Checks'
+<a href="#top">(inicio)</a>
 
 ````
 ['hash-count-error',
