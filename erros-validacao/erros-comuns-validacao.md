@@ -192,9 +192,23 @@ Observar se a estrutura física do dado está coerente com sua representação l
 
 - dd/mm/aaaa (formato usual no Brasil e como geralmente esse tipo de variável é exportado do excel)
 
+![](static/data-goodtables1.png)
 
-* **Solução**: adequar o formato da data no `datapackage.json`
+![](static/data-goodtables2.png)
 
+````
+  {
+    "name": "date",
+    "type": "date",
+    "format": "default",
+    "title": "Date"
+  },
+````
+
+
+* **Solução**: adequar o formato da data no `datapackage.json` ou no arquivo de dados:
+
+![](static/data-commit.png)
 
 **2.1.2. dado obrigatório ausente**
 <a href="#top">(inicio)</a>
