@@ -14,13 +14,13 @@
 
   2.1. [Divergências de características dos dados no `datapackage.json`](https://github.com/dados-mg/dados-mg.github.io/blob/erros-valiacao/erros-validacao/erros-comuns-validacao.md#21-diverg%C3%AAncias-de-caracter%C3%ADsticas-dos-dados-no-datapackagejson)
 
-    a. formatos de data
+  2.1.1. formatos de data
 
-    b. dado obrigatório ausente
+  2.1.2. dado obrigatório ausente
 
-    c. valor numérico não inteiro
+  2.1.3. valor numérico não inteiro
 
-    d.valor fora das características informadas
+  2.1.4. valor fora das características informadas
 
   2.2. [Valores fora dos campos delimitadores (, ou ;)](https://github.com/dados-mg/dados-mg.github.io/blob/erros-valiacao/erros-validacao/erros-comuns-validacao.md#22-valores-fora-dos-campos-delimitadores--ou-)
 
@@ -180,7 +180,7 @@ schema-error  Schema is not valid: cannot extract metadata "schema.json" because
 
 #### 2.1. Divergências de características dos dados no `datapackage.json`
 
-**a. formatos de data**
+**2.1.1. formatos de data**
 
 Observar se a estrutura física do dado está coerente com sua representação lógica no arquivo de metadados `datapackage.json`, ex:
 
@@ -192,7 +192,7 @@ Observar se a estrutura física do dado está coerente com sua representação l
 * **Solução**: adequar o formato da data no `datapackage.json`
 
 
-**b. dado obrigatório ausente**
+**2.1.2. dado obrigatório ausente**
 <a href="#top">(inicio)</a>
 
 ````$ frictionless validate datapackage.json
@@ -230,7 +230,7 @@ row  field  code        message
 * **Solução**: completar o valor ausente indicado no arquivo do recurso. Se ele não for obrigatório, aplicar 'NA' na célula indicada no arquivo do recurso
 
 
-**c. valor numérico não inteiro**
+**2.1.3. valor numérico não inteiro**
 <a href="#top">(inicio)</a>
 
 - faltou informar os separadores de milhar (groupChar) e decimais (decimalChar):            
@@ -261,10 +261,10 @@ row  field  code        message
 "decimalChar": ","
 ````
 
-**d. valor fora das características informadas**
+**2.1.4. valor fora das características informadas**
 <a href="#top">(inicio)</a>
 
-  i. type-error
+  **a. type-error**
 
 ````$ frictionless validate datapackage.json
 # -------
@@ -283,7 +283,7 @@ row  field  code        message
 
 * **Solução**: alterar os valores no arquivo do recurso, observando as características das variáveis numéricas indicadas no `datapackage.json`. Caso o problema tenha sido na descrição do dado, alterar as propriedades necessárias no `datapackage.json`  
   
-  ii. constraint-error - pattern
+  **b. constraint-error - pattern**
 
 ````
 $ frictionless validate datapackage.json
