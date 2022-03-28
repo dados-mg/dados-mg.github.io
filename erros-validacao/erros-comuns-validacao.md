@@ -28,14 +28,18 @@
 
 [Appendix - Lista de verificação Frictionless - 'Validation Checks'](https://github.com/dados-mg/dados-mg.github.io/blob/erros-valiacao/erros-validacao/erros-comuns-validacao.md#lista-de-verifica%C3%A7%C3%A3o-frictionless---validation-checks)
 
-Este documento segue, tanto quanto possível, a estrutura:
+---
+
+Este documento segue, tanto quanto possível, a estrutura de classificação hierárquica por assunto e método de descrição seguinte:
 
 ---
 ## Natureza/grupo do erro
 
 ## Título do erro
 
-a. Caso de uso
+Caso de uso
+
+Item
 
 Descrição sucinta
 
