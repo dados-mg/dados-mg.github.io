@@ -3,17 +3,27 @@
 * Índice:
 
  1. [Sobre os arquivos de metadados e seu conteúdo](https://github.com/dados-mg/dados-mg.github.io/blob/erros-valiacao/erros-validacao/erros-comuns-validacao.md#1-sobre-os-arquivos-de-metadados-e-seu-conte%C3%BAdo)
+
   1.1. [Sintaxe do `datapackage.json`](https://github.com/dados-mg/dados-mg.github.io/blob/erros-valiacao/erros-validacao/erros-comuns-validacao.md#11-sintaxe-do-datapackagejson)
+
   1.2. [Nome `name` do recurso contém caracteres fora da faixa permitida](https://github.com/dados-mg/dados-mg.github.io/blob/erros-valiacao/erros-validacao/erros-comuns-validacao.md#12-nome-name-do-recurso-cont%C3%A9m-caracteres-fora-da-faixa-permitida)
+  
   1.3. [O caminho `path` incorreto](https://github.com/dados-mg/dados-mg.github.io/blob/erros-valiacao/erros-validacao/erros-comuns-validacao.md#13-o-caminho-path-incorreto)
 
 2. [Sobre os arquivos de dados e seu conteúdo](https://github.com/dados-mg/dados-mg.github.io/blob/erros-valiacao/erros-validacao/erros-comuns-validacao.md#2-sobre-os-arquivos-de-dados-e-seu-conte%C3%BAdo)
+
   2.1. [Divergências de características dos dados no `datapackage.json`](https://github.com/dados-mg/dados-mg.github.io/blob/erros-valiacao/erros-validacao/erros-comuns-validacao.md#21-diverg%C3%AAncias-de-caracter%C3%ADsticas-dos-dados-no-datapackagejson)
+
     a. formatos de data
+
     b. dado obrigatório ausente
+
     c. valor numérico não inteiro
+
     d.valor fora das características informadas
+
   2.2. [Valores fora dos campos delimitadores (, ou ;)](https://github.com/dados-mg/dados-mg.github.io/blob/erros-valiacao/erros-validacao/erros-comuns-validacao.md#22-valores-fora-dos-campos-delimitadores--ou-)
+
   2.3. [Arquivo de dados sem encoding `utf-8`](https://github.com/dados-mg/dados-mg.github.io/blob/erros-valiacao/erros-validacao/erros-comuns-validacao.md#23-arquivo-de-dados-sem-encoding-utf-8)
 
 [Appendix - Lista de verificação Frictionless - 'Validation Checks'](https://github.com/dados-mg/dados-mg.github.io/blob/erros-valiacao/erros-validacao/erros-comuns-validacao.md#lista-de-verifica%C3%A7%C3%A3o-frictionless---validation-checks)
@@ -36,7 +46,9 @@ Exemplo copiado de mensagem de erro de relatório online (`github actions`)
 Print do arquivo e/ou pasta mostrando o erro
 
 Solução proposta
+
 ---
+
 
 
 ## 1. Sobre os arquivos de metadados e seu conteúdo
