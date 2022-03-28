@@ -1,10 +1,63 @@
-# Erros comuns de validação
+# Erros comuns de validação:
+
+* Índice:
+
+ 1. [Sobre os arquivos de metadados e seu conteúdo](https://github.com/dados-mg/dados-mg.github.io/blob/erros-valiacao/erros-validacao/erros-comuns-validacao.md#1-sobre-os-arquivos-de-metadados-e-seu-conte%C3%BAdo)
+  1.1. [Sintaxe do `datapackage.json`](https://github.com/dados-mg/dados-mg.github.io/blob/erros-valiacao/erros-validacao/erros-comuns-validacao.md#11-sintaxe-do-datapackagejson)
+  1.2. [Nome `name` do recurso contém caracteres fora da faixa permitida](https://github.com/dados-mg/dados-mg.github.io/blob/erros-valiacao/erros-validacao/erros-comuns-validacao.md#12-nome-name-do-recurso-cont%C3%A9m-caracteres-fora-da-faixa-permitida)
+  1.3. [O caminho `path` incorreto](https://github.com/dados-mg/dados-mg.github.io/blob/erros-valiacao/erros-validacao/erros-comuns-validacao.md#13-o-caminho-path-incorreto)
+
+2. [Sobre os arquivos de dados e seu conteúdo](https://github.com/dados-mg/dados-mg.github.io/blob/erros-valiacao/erros-validacao/erros-comuns-validacao.md#2-sobre-os-arquivos-de-dados-e-seu-conte%C3%BAdo)
+  2.1. [Divergências de características dos dados no `datapackage.json`](https://github.com/dados-mg/dados-mg.github.io/blob/erros-valiacao/erros-validacao/erros-comuns-validacao.md#21-diverg%C3%AAncias-de-caracter%C3%ADsticas-dos-dados-no-datapackagejson)
+    a. formatos de data
+    b. dado obrigatório ausente
+    c. valor numérico não inteiro
+    d.valor fora das características informadas
+  2.2. [Valores fora dos campos delimitadores (, ou ;)](https://github.com/dados-mg/dados-mg.github.io/blob/erros-valiacao/erros-validacao/erros-comuns-validacao.md#22-valores-fora-dos-campos-delimitadores--ou-)
+  2.3. [Arquivo de dados sem encoding `utf-8`](https://github.com/dados-mg/dados-mg.github.io/blob/erros-valiacao/erros-validacao/erros-comuns-validacao.md#23-arquivo-de-dados-sem-encoding-utf-8)
+
+[Appendix - Lista de verificação Frictionless - 'Validation Checks'](https://github.com/dados-mg/dados-mg.github.io/blob/erros-valiacao/erros-validacao/erros-comuns-validacao.md#lista-de-verifica%C3%A7%C3%A3o-frictionless---validation-checks)
+
+Este documento segue, tanto quanto possível, a estrutura:
+
+---
+# Natureza/grupo do erro
+
+## Título do erro
+
+a. Caso de uso
+
+Descrição sucinta
+
+Exemplo copiado de mensagem de erro após `frictionless validate` na `bash cell`
+
+Exemplo copiado de mensagem de erro de relatório online (`github actions`)
+
+Print do arquivo e/ou pasta mostrando o erro
+
+Solução proposta
+---
+
 
 ## 1. Sobre os arquivos de metadados e seu conteúdo
+<a href="#top">(inicio)</a>
 
 #### 1.1. Sintaxe do `datapackage.json`:
 
 **a. faltou abrir ou fechar algum campo com aspas, "", colchetes '[ ]' ou chaves '{ }'**
+
+Esse problema pode acontecer na inclusão ou edição de qualquer propriedade ou seu valor, como por exemplo:
+
+- edição do `name`, `title`, ou `description`, do conjunto ou dos `resources`;
+
+- nas propriedades das variáveis/colunas de cada `resource` (`schema`);
+
+- na inclusão de pastas para `resource` (i.e.: 'data/resource.csv'), `schema.json`, `dialect.json`, etc;
+
+- na inclusão de novo recurso;
+
+- na inclusão da propriedade `owner_org`; dentre outros ...
+
 
 ````$ frictionless validate datapackage.json
 # -------
@@ -26,6 +79,8 @@ package-error  The data package has an error: cannot extract metadata "datapacka
 
 **b. faltou/sobrou alguma vírgula**
 
+Esse problema pode acontecer em diversas situações, tal qual exemplificado no caso de uso anterior.
+
 ````$ frictionless validate datapackage.json
 # -------
 # invalid: datapackage.json
@@ -46,6 +101,8 @@ package-error  The data package has an error: cannot extract metadata "datapacka
 
 #### 1.2. Nome `name` do recurso contém caracteres fora da faixa permitida
 
+A especificação `Frictionless` não aceita espaços, letras maiúsculas ou caracteres especiais no valor deste campo:
+
 ````$ frictionless validate datapackage.json
 # -------
 # invalid: datapackage.json
@@ -59,7 +116,7 @@ package-error  The data package has an error: "'doa▒▒es-comodatos-amigo-esta
 
 ![](static/name.png)
 
-* **Solução**: corrigir a propriedade `name` contendo [especificações legíveis por máquina](https://specs.frictionlessdata.io/data-resource/#metadata-properties) (i.e. letras minúsculas, sem espaços, sem caracteres especiais)
+* **Solução**: corrigir a propriedade `name` contendo [especificações legíveis por máquina](https://specs.frictionlessdata.io/data-resource/#metadata-properties)
 
 
 #### 1.3. O caminho `path` incorreto
@@ -105,11 +162,20 @@ schema-error  Schema is not valid: cannot extract metadata "schema.json" because
 
 
 ## 2. Sobre os arquivos de dados e seu conteúdo
+<a href="#top">(inicio)</a>
 
 #### 2.1. Divergências de características dos dados no `datapackage.json`
 
 **a. formatos de data**
 
+Observar se a estrutura física do dado está coerente com sua representação lógica no arquivo de metadados `datapackage.json`, ex:
+
+- AAAA/MM/DD (formato `default` para data na especificação `Frictionless`);
+
+- dd/mm/aaaa (formato usual no Brasil e como geralmente esse tipo de variável é exportado do excel)
+
+
+* **Solução**: adequar o formato da data no `datapackage.json`
 
 
 **b. dado obrigatório ausente**
@@ -224,6 +290,8 @@ row  field  code              message
 
 #### 2.2. valores fora dos campos delimitadores (, ou ;):
 
+Na conversão de tipos de arquivo, texto ou valores de uma coluna podem 'vazar'. Observar se há sinais de pontuação (',', ';') que também funcionam como delimitadores, e podem redundar no erro:
+
 ````
 $ frictionless validate datapackage.json
 # -------
@@ -250,15 +318,17 @@ a. encoding Western, Latin, Windows...
 
 b. encoding UTF-8 sem Byte Order Mask (BOM)
 
+A assinatura 'Byte Order Mask (BOM)' preserva a visualiação adequada dos caracteres especiais, quando houve conversão de arquivo tabular do formato `excel` para `csv`. Quando ela não está aplicada, pode ocorrer o problema em outras ferramentas de edição de `csv`, como o `excel`:
+
 ![](static/bom.png)
 
 ![](static/bom-comparado.png)
 
-* **Solução**: gerar o arquivo `csv` com o BOM. No editor de texto Sublime, 'Save with Encoding --> UTF-8 with BOM'
+* **Solução**: gerar o arquivo `csv` com o BOM. No editor de texto Sublime, 'Save with Encoding --> UTF-8 with BOM'. Via Python, usando o pacote 'Pandas', aplicar `read_file.to_csv (csv_file_path, encoding = 'utf-8-sig')`
 
 - - - 
 
-## Lista de verificação Frictionless - 'Validation Checks'
+## Appendix - Lista de verificação Frictionless - 'Validation Checks'
 
 ````
 ['hash-count-error',
