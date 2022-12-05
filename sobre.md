@@ -15,7 +15,7 @@
 
 - [Lei de Acesso à Informação (Lei 12.527/2011)](http://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/lei/l12527.htm);
 
-- [Lei Federal 14.129, de 2021](Lei Federal nº 14.129, de 29 de março de 2021);
+- [Lei Federal 14.129, de 2021](https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/l14129.htm);
 
 - [Decreto Estadual 45969/2012](https://www.almg.gov.br/consulte/legislacao/completa/completa.html?tipo=DEC&num=45969&ano=2012);
 
